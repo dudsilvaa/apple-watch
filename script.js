@@ -52,7 +52,6 @@ function atualizarTamanho() {
     tituloProduto.innerText = `Pulseira loop esportiva ${opcoesCores[corSelecionada].nome.toLowerCase()} para caixa de ${opcoesTamanho[tamanhoSelecionado]}`;
 }
 
-
 // Função para mudar o tamanho da imagem do relógio de acordo com o que o usuário escolher
 function atualizarImagemSelecionada() {
     const opcaoImagemSelecionada = document.querySelector('[name="opcao-imagem"]:checked').id.charAt(0);
@@ -67,8 +66,9 @@ function atualizarCorSelecionada() {
     nomeCorSelecionada.innerText = `Cor: ${opcoesCores[corSelecionada].nome}`;
     imagemVisualizacao.src = `./imagens/opcoes-cores/${opcoesCores[corSelecionada].nomePastaImagens}/imagem-${imagemSelecionada}.jpeg`;
     tituloProduto.innerText = "Pulseira loop esportiva " + opcoesCores[corSelecionada].nome.toLocaleLowerCase() + " para caixa de " + opcoesTamanho[tamanhoSelecionado];
-
-    opcaoImagem0.src = "./imagens/opcoes-cores/" + opcoesCores[corSelecionada].nomePastaImagens + "imagem-0.jpeg";
-    opcaoImagem1.src = "./imagens/opcoes-cores/" + opcoesCores[corSelecionada].nomePastaImagens + "imagem-1.jpeg";
-    opcaoImagem2.src = "./imagens/opcoes-cores/" + opcoesCores[corSelecionada].nomePastaImagens + "imagem-2.jpeg";
+    
+    opcaoImagem0.src = `./imagens/opcoes-cores/${opcoesCores[corSelecionada].nomePastaImagens}/imagem-0.jpeg`;
+    opcaoImagem1.src = `./imagens/opcoes-cores/${opcoesCores[corSelecionada].nomePastaImagens}/imagem-1.jpeg`;
+    opcaoImagem2.src = `./imagens/opcoes-cores/${opcoesCores[corSelecionada].nomePastaImagens}/imagem-2.jpeg`;
+    tituloProduto.innerText = `Pulseira loop esportiva ${opcoesCores[corSelecionada].nome.toLowerCase()} para caixa de ${opcoesTamanho[tamanhoSelecionado]}`;
 }
